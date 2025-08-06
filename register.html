@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechConnect 2025 - Register</title>
+  <link rel="stylesheet" href="Event.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Event.html">Home</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="speakers.html">Speakers</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="section register-section">
+    <h2>Register Now</h2>
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required />
+      <label for="ticket">Select Ticket Type:</label>
+      <select id="ticket" name="ticket" required>
+        <option value="" disabled selected>Choose an option</option>
+        <option value="standard">Standard - $99</option>
+        <option value="vip">VIP - $199</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  <footer>
+    <p>© 2025 TechConnect Conference. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
