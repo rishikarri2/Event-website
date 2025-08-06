@@ -1,0 +1,260 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafc;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* Navigation */
+header {
+  background-color: #003366;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+nav ul li {
+  margin: 0 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+/* Sections */
+.section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(
+      rgba(0, 51, 102, 0.75), 
+      rgba(0, 51, 102, 0.75)
+    ),
+    url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: #00bcd4;
+  color: #003366;
+  font-weight: 700;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0097a7;
+}
+
+/* Schedule Timeline */
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 20px;
+  border-left: 4px solid #00bcd4;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  background-color: #00bcd4;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 5px rgba(0,188,212,0.6);
+}
+
+.timeline-item .time {
+  font-weight: 700;
+  color: #007a8a;
+  margin-bottom: 5px;
+}
+
+.timeline-item .content h3 {
+  font-size: 1.2rem;
+  color: #003366;
+  margin-bottom: 5px;
+}
+
+/* Speakers */
+.speakers-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.speaker-card {
+  background-color: white;
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: default;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.speaker-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.speaker-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.speaker-card h3 {
+  font-size: 1.2rem;
+  color: #003366;
+  margin-bottom: 5px;
+}
+
+.speaker-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Registration Form */
+.register-section form {
+  max-width: 400px;
+  margin: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-section label {
+  font-weight: 600;
+  color: #003366;
+}
+
+.register-section input,
+.register-section select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+}
+
+.register-section input:focus,
+.register-section select:focus {
+  outline: none;
+  border-color: #00bcd4;
+  box-shadow: 0 0 5px #00bcd4;
+}
+
+.register-section button {
+  background-color: #00bcd4;
+  color: #003366;
+  font-weight: 700;
+  padding: 12px 0;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.register-section button:hover {
+  background-color: #0097a7;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .speakers-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+}
